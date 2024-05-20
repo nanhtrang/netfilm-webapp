@@ -1,4 +1,6 @@
-export const LANGUAGES = [
-  { label: "Tiếng Việt", code: "vn" },
-  { label: "English", code: "en" },
+const languagues = [
+  {label: "Tiếng Việt", code: "vn"},
+  {label: "English", code: "en"},
 ];
+
+export default languagues
