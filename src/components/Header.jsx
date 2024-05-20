@@ -22,7 +22,7 @@ function Header() {
               </Form.Select>
             </div>
             <div className='d-flex justify-content-center align-items-center ms-2'>
-              <Button variant="danger" style={{ width: '160px' }}>
+              <Button variant="danger" style={{ width: '130px' }}>
                 Đăng nhập
               </Button>
             </div>

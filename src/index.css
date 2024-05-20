@@ -100,6 +100,36 @@ div {
 
 .field-email-container {
   max-width: 412px;
+  height: 56px;
+  position: relative;
+}
+
+.field-email-container input {
+  margin-top: 18px;
+}
+
+.field-email-container input:focus ~ .floating-label,
+.field-email-container input:not(:focus):valid ~ .floating-label{
+  top: 6px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.inputText {
+  width: 400px;
+  height: 35px;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 14px;
+  transition: 0.2s ease all;
 }
 
 .field-email-container input, .field-email-container input:active, .field-email-container input:focus {
@@ -108,4 +138,26 @@ div {
   border: none !important;
   outline: none !important;
 }
+
+.footer-container{
+  width: 70%;
+}
+
+.btn-start-container{
+  max-width: 163px;
+}
+.btn-start-container button {
+  height: 100%;
+  width: 120px;
+}
+
+.article-banner {
+  width: 70%;
+  margin: auto;
+}
+.banner-container {
+  min-height: 700px;
+}
+
+
 

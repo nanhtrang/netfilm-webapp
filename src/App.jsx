@@ -3,6 +3,7 @@ import {useTranslation} from 'react-i18next'
 import {useDispatch, useSelector} from 'react-redux'
 import {updateLang} from './store/feature/applicationSlice'
 import Banner from "./components/Banner.jsx";
+import FilmLayout from './layout/FilmLayout.jsx';
 
 function App() {
   const { i18n, t } = useTranslation();
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <>
-      <Banner/>
+      <FilmLayout/>
     </>
   )
 }
