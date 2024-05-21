@@ -26,7 +26,7 @@ function Banner() {
           </div>
           <div className='btn-start-container me-2 ms-3'>
             <Button variant='danger'>
-            Bắt đầu
+              Bắt đầu
               <FaChevronRight/>
             </Button>
           </div>

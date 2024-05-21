@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import i18n from "../../plugins/i18n";
 
 const applicationSlice = createSlice({
@@ -13,5 +13,5 @@ const applicationSlice = createSlice({
   }
 })
 
-export const { updateLang } = applicationSlice.actions
+export const {updateLang} = applicationSlice.actions
 export default applicationSlice.reducer

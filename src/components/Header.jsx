@@ -1,7 +1,7 @@
 import languagues from "../plugins/i18n/languagues.js";
 import {Button, Form, FormSelect} from "react-bootstrap";
-import { PiTranslateThin } from "react-icons/pi";
-import { MdOutlineTranslate } from "react-icons/md";
+import {PiTranslateThin} from "react-icons/pi";
+import {MdOutlineTranslate} from "react-icons/md";
 
 
 function Header() {
@@ -17,12 +17,13 @@ function Header() {
           <div className='d-inline-flex'>
             <div>
               <MdOutlineTranslate className='icon-translate'/>
-              <Form.Select style={{backgroundColor: "black", color: "white", }} className='d-flex align-items-center lang-select'>
+              <Form.Select style={{backgroundColor: "black", color: "white",}}
+                           className='d-flex align-items-center lang-select'>
                 {langs}
               </Form.Select>
             </div>
             <div className='d-flex justify-content-center align-items-center ms-2'>
-              <Button variant="danger" style={{ width: '130px' }}>
+              <Button variant="danger" style={{width: '130px'}}>
                 Đăng nhập
               </Button>
             </div>
