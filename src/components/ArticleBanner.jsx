@@ -1,6 +1,10 @@
 import bg1 from '../assets/images/tvBackground/tv.png'
 import bg2 from '../assets/images/tvBackground/mobile-0819.jpg'
 import bg3 from '../assets/images/tvBackground/device-pile.png'
+import boxshot from '../assets/images/tvBackground/boxshot.png'
+import { IoMdDownload } from 'react-icons/io'
+import '../assets/css/component.css'
+import { FaCheckCircle } from 'react-icons/fa'
 
 const data = [
   {
@@ -17,7 +21,8 @@ const data = [
     src: bg2,
     isLeft: false,
     background: bg2,
-    isDownload: true
+    isDownload: true,
+    imgDownload: boxshot
   },
   {
     title: 'Watch everywhere',
@@ -37,6 +42,7 @@ const data = [
   }
 ]
 
+
 function downloadDock() {
   return (
     <>
@@ -53,24 +59,16 @@ function downloadDock() {
 }
 
 function ArticleRender(props) {
-  const isLeft = props.isLeft
-  const title = props.title;
-  const subTitle = props.subTitle
-  const img = props.img
+  const isLeft = props.article.isLeft
+  const title = props.article.title;
+  const subTitle = props.article.subTitle
+  const img = props.article.src
+  const isDownload = props.article.isDownload
+  const imgDownload = props.article.imgDownload
   return (
-    <div className='row' style={{minHeight: '520px'}}>
-      {!isLeft && (
-        <div className='col-sm-6 position-relative'>
-          <div className='is-download position-absolute'>
-            asdasdasd
-          </div>
-          <div>
-            <img src={img}/>
-          </div>
-        </div>
-      )}
-      <div className='col-sm-6 d-flex align-items-center'>
-        <div>
+    <div className={`row ${isLeft ? 'flex-row-reverse' : ''}`} style={{ minHeight: '520px' }}>
+      <div className='col-md-12 col-sm-12 col-lg-6'>
+        <div className=''>
           <div className='article-title'>
             {title}
           </div>
@@ -79,16 +77,36 @@ function ArticleRender(props) {
           </div>
         </div>
       </div>
-      {isLeft && (
-        <div className='col-sm-6'>
-          <div className='is-download'>
-            asdasdasd
+      <div className='col-md-12 col-sm-12 col-lg-6 d-flex justify-content-center position-relative '>
+        {isDownload && (
+          <div className='is-download position-absolute d-flex align-items-center border rounded'>
+            <div className='is-download-image'>
+              <img src={imgDownload} alt="" />
+            </div>
+            <div className='is-download-title-container'>
+              <div className="is-download-title">Stranger Things</div>
+              <div className="is-download-subtitle">Downloading...</div>
+            </div>
+            <div className="download-icon-container">
+              <div className="circle-wrap">
+                <div className="circle">
+                  <div className="mask full-1">
+                    <div className="fill-1"></div>
+                  </div>
+                  <div className="mask half">
+                    <div className="fill-1"></div>
+                  </div>
+                </div>
+              </div>
+              <IoMdDownload id="icon-download" />
+              <FaCheckCircle id="icon-done" />
+            </div>
           </div>
-          <div>
-            <img src={img}/>
-          </div>
+        )}
+        <div>
+          <img style={{ width: '100%' }} src={img} />
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -97,17 +115,14 @@ function ArticleBanner() {
   return (
     <div>
       {data.map((item, index) => (
-        <>
+        <div key={index}>
           <div className='divider'></div>
           <div className='article-banner'>
             <ArticleRender
-              isLeft={item.isLeft}
-              title={item.title}
-              subTitle={item.title}
-              img={item.src}
+              article={item}
             />
           </div>
-        </>
+        </div>
       ))}
     </div>
   )
