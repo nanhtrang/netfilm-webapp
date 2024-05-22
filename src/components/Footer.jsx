@@ -21,7 +21,7 @@ const links = [
 
 function Footer() {
   return (
-    <div className='mt-auto footer-container mx-auto pb-5'>
+    <div className='mt-auto pt-5 footer-container mx-auto pb-5'>
       <div className='row'>
         {links.map((el, index) => (
           <div className='col-sm-3 my-2' key={index}>
