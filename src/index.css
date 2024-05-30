@@ -135,7 +135,7 @@ div {
     left: 20px;
     top: 14px;
     transition: 0.2s ease all;
-}
+}   
 
 .field-email-container input, .field-email-container input:active, .field-email-container input:focus {
     background-color: transparent;
@@ -172,5 +172,8 @@ div {
     background-color: #232323;
 }
 
+.collapse  {
+    transition: all 0.3s ease !important;
+}
 
 

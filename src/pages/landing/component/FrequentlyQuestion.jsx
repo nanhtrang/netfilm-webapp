@@ -1,67 +1,66 @@
-import { Button, Collapse } from 'react-bootstrap'
+import { Button, Container, Row } from 'react-bootstrap'
+import CollapseLanding from './CollapseLanding'
 import './component.css'
-import { useState } from 'react';
+import { FaChevronRight } from 'react-icons/fa'
 
 const data = [
   {
     question: 'What can I watch on Netflix?',
     answer: 'Netflix has an extensive library of feature films, documentaries, TV programmes, anime, award-winning Netflix originals and more. Watch as much as you want, anytime you want.',
-    open: false
   },
   {
     question: 'What can I watch on Netflix?',
     answer: 'Netflix is a streaming service that offers a wide variety of award-winning TV programmes, films, anime, documentaries and more – on thousands of internet-connected devices. \nYou can watch as much as you want, whenever you want, without a single advert – all for one low monthly price. There\'s always something new to discover, and new TV programmes and films are added every week!',
-    open: false
   },
   {
     question: 'What can I watch on Netflix?',
     answer: 'Netflix has an extensive library of feature films, documentaries, TV programmes, anime, award-winning Netflix originals and more. Watch as much as you want, anytime you want.',
-    open: false
   },
   {
     question: 'What can I watch on Netflix?',
     answer: 'Netflix has an extensive library of feature films, documentaries, TV programmes, anime, award-winning Netflix originals and more. Watch as much as you want, anytime you want.',
-    open: false
   },
   {
     question: 'What can I watch on Netflix?',
     answer: 'Netflix has an extensive library of feature films, documentaries, TV programmes, anime, award-winning Netflix originals and more. Watch as much as you want, anytime you want.',
-    open: false
   },
   {
     question: 'What can I watch on Netflix?',
     answer: 'Netflix has an extensive library of feature films, documentaries, TV programmes, anime, award-winning Netflix originals and more. Watch as much as you want, anytime you want.',
-    open: false
   }
 ]
 
 function FrequentlyQuestion() {
+
   return (
     <>
-      {/* <div className='divider'></div> */}
-      {data.map((el, index) => (
-        // <Question question={el} key={index} />
-        <div key={index}>
-          <div>
-            <button className="btn btn-primary" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target={`#collapse-${index}`} 
-              aria-expanded="false" 
-              aria-controls={`#collapse-${index}`}>
-              {el.question}
-            </button>
+      <div className='frequently-question article-banner'>
+        <h2>Frequently Asked Questions</h2>
+        {data.map((item, index) => (
+          <div key={index} className='question-item'>
+            <CollapseLanding item={item} />
           </div>
-          <div>
-            <div className="collapse" id={`collapse-${index}`}>
-              <div className="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-              </div>
+        ))}
+
+        <Container className="banner-container-text">
+          <Row className='d-flex justify-content-center' style={{ fontSize: '20px' }}>
+            Bạn đã sẵn sàng xem chưa? Nhập email để tạo hoặc kích hoạt lại tư cách thành viên của bạn.
+          </Row>
+          <div className=' d-flex justify-content-center mt-3'>
+            <div className='field-email-container border rounded'>
+              <input type="text" className="inputText" required />
+              <span className="floating-label">Email or phone</span>
+            </div>
+            <div className='btn-start-container me-2 ms-3'>
+              <Button variant='danger'>
+                Bắt đầu
+                <FaChevronRight />
+              </Button>
             </div>
           </div>
-        </div>
-      ))}
-      {/* <div className='divider'></div> */}
+        </Container>
+      </div>
+      <div className='divider'></div>
     </>
   )
 }

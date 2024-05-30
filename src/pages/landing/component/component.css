@@ -229,3 +229,42 @@
   margin-left: 16%;
   margin-top: -15%;
 }
+
+.collapse-question {  
+  background-color: #2d2d2d;
+  height: 84px !important;
+  width: 100%;
+  border: none;
+  transition: .3s ease all;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  position: relative;
+}
+
+.collapse-question:hover {
+  background-color: #4d4d4d;
+}
+
+.collapse-question span {
+  position: absolute;
+  right: 25px;
+}
+
+.collapse-item {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  background-color: #2d2d2d;
+  padding: 24px;
+  font-size: 24px;
+  transition: .3s ease all;
+  overflow: hidden;
+}
+
+.is-collapse {
+  height: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
