@@ -3,6 +3,7 @@ import {useTranslation} from 'react-i18next';
 import {useDispatch, useSelector} from 'react-redux';
 import LandingPage from './pages/landing/LandingPage.jsx';
 import {updateLang} from './store/feature/applicationSlice';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   // const { i18n, t } = useTranslation();
@@ -29,6 +30,12 @@ function App() {
   // }, [message])
   const [isLogin, setIsLogin] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
+
+  const location = useLocation()
+
+  useEffect(() => {
+    console.log('Location changed!', location.pathname);
+  }, [location])
 
   return (
     <>

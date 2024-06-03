@@ -1,14 +1,17 @@
 import languagues from "../plugins/i18n/languagues.js";
-import {Button, Form, FormSelect} from "react-bootstrap";
-import {PiTranslateThin} from "react-icons/pi";
+import {Button, Form} from "react-bootstrap";
 import {MdOutlineTranslate} from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 
 function Header() {
 
+  const navigate = useNavigate()
+
   const langs = languagues.map((lang) =>
     <option key={lang.code} value={lang.code}>{lang.label}</option>
   )
+
   return (
     <>
       <div className="d-flex justify-content-center w-100">
@@ -23,7 +26,7 @@ function Header() {
               </Form.Select>
             </div>
             <div className='d-flex justify-content-center align-items-center ms-2'>
-              <Button variant="danger" style={{width: '130px'}}>
+              <Button onClick={() => {navigate('/login')}} variant="danger" style={{width: '130px'}}>
                 Đăng nhập
               </Button>
             </div>

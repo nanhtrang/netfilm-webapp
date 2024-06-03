@@ -1,0 +1,13 @@
+.login-box {
+  width: 314px !important;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-bg {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-dark {
+  background-color: black !important;;
+}
