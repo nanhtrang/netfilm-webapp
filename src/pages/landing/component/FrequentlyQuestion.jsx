@@ -38,7 +38,7 @@ function FrequentlyQuestion() {
         <h2>Frequently Asked Questions</h2>
         {data.map((item, index) => (
           <div key={index} className='question-item'>
-            <CollapseLanding item={item} />
+            <CollapseLanding id={`collapse-icon-${index}`} item={item} />
           </div>
         ))}
 
