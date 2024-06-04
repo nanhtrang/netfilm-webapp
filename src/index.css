@@ -36,12 +36,7 @@ div {
     font-size: 50px;
     color: #e50914;
     letter-spacing: 5px;
-    /*text-shadow:*/
-    /*  3px 3px 0 #000,*/
-    /*  -1px -1px 0 #000,*/
-    /*  1px -1px 0 #000,*/
-    /*  -1px 1px 0 #000,*/
-    /*  1px 1px 0 #000;*/
+    cursor: pointer;
 }
 
 .btn-danger {
@@ -135,6 +130,7 @@ div {
     left: 20px;
     top: 14px;
     transition: 0.2s ease all;
+    color: #b8b8b8;
 }   
 
 .field-email-container input, .field-email-container input:active, .field-email-container input:focus {
@@ -174,6 +170,16 @@ div {
 
 .collapse  {
     transition: all 0.3s ease !important;
+}
+
+.btn-secondary {
+    background-color: rgba(128, 128, 128, 0.4) !important;
+    border: rgba(128, 128, 128, 0) 1px solid;
+    outline: none;
+}
+
+.c-pointer {
+    cursor: pointer;
 }
 
 

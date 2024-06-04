@@ -2,6 +2,7 @@ import languagues from "../plugins/i18n/languagues.js";
 import {Button, Form} from "react-bootstrap";
 import {MdOutlineTranslate} from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import Logo from "./Logo.jsx";
 
 
 function Header() {
@@ -16,7 +17,7 @@ function Header() {
     <>
       <div className="d-flex justify-content-center w-100">
         <div className="header-box d-flex align-items-center justify-content-between">
-          <div className="header-logo">NETFILM</div>
+        <Logo/>
           <div className='d-inline-flex'>
             <div>
               <MdOutlineTranslate className='icon-translate'/>
